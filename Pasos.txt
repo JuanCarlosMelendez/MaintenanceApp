@@ -1,0 +1,96 @@
+Crear un proyecto de React:
+Abre terminal y comando (con Vite):
+    npm create vite@latest
+    la terminal pide el nombre, lo ingresas
+    luego seleccionas si deseas con javascript o typescript y
+    listo.
+
+Cd a la carpeta del proyecto
+instalamos las dependencias del paquete npm:
+comando:
+npm install
+
+Crear proyecto pero con Create React.
+    Abre terminal y pega el comando:
+    npx create-react-app my-app
+
+Para correr la app puedes usar el script o copiar directo en
+la terminal el comando:
+npm run dev 
+
+
+PARA EL TESTING:
+
+PROBANDO COMANDOS PERO CON NPM I:
+
+Estos funcionan igual al curso pero con npm:
+
+comando:
+npm install --save-dev jest
+npm install --save-dev babel-jest
+npm install --save-dev @babel/preset-env
+npm install --save-dev @babel/preset-react 
+
+npm install --save-dev @testing-library/react @types/jest jest-environment-jsdom
+
+NOTA: se pueden juntar todos en solo dos comandos pero estan asi porque los fui probando
+*****IMPORTANTE****
+    Para este caso los archivos a crear deben ser del tipo .cjs sino da un error el comando de test
+
+Por usar react version 18 o superior se usa esto para el fecth
+npm install --save-dev whatwg-fetch
+
+Se debe crear el archivo de abel babel.config.cjs con la siguiente data:
+
+module.exports = {
+    presets: [
+        [ '@babel/preset-env', { targets: { esmodules: true } } ],
+        [ '@babel/preset-react', { runtime: 'automatic' } ],
+    ],
+};
+
+Se crea el archivo jes config jest.config.cjs:
+
+module.exports = {
+    testEnvironment: 'jest-environment-jsdom',
+    setupFiles: ['./jest.setup.js']
+}
+
+Crear archivo jest.setup.cjs:
+// En caso de necesitar la implementación del FetchAPI
+import 'whatwg-fetch'; // <-- yarn add whatwg-fetch
+
+INSTALAR EL ROUTER DE REACT 
+
+1. Hacer cd a la carpeta del proyecto.
+2. Instalar el router, este es el comando del lastest:
+    npm install react-router-dom
+    mas info en la pagina de React Router https://reactrouter.com/en/main/start/tutorial
+
+INTALAR MATERIAL UI:
+
+En la web de MUI buscamos los paquetes de core, allí conseguiremos el apartado de 
+material UI y el getstarterd:
+
+comando:
+
+npm install @mui/material @emotion/react @emotion/styled
+
+Instalar la robotoFont
+Este se coloca en el head del index.css:
+
+<link
+  rel="stylesheet"
+  href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap"
+/>
+
+Instalar el Icons:
+
+Comando:
+npm install @mui/icons-material
+
+
+INSTALAR REDUX TOOLKIT
+
+npm install @reduxjs/toolkit react-redux
+
